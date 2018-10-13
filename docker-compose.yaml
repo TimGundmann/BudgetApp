@@ -5,4 +5,4 @@ services:
     build: .
     ports:
      - "8888:80"
-    image: BudgetApp
+    image: budget-app
