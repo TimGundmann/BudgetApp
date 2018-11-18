@@ -1,0 +1,27 @@
+<label>
+  <input type="file" (change)="fileUpload($event)" />
+</label>
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th class="name"><span>Navn</span></th>
+      <th><span>Jan</span></th>
+      <th><span>Feb</span></th>
+      <th><span>Mar</span></th>
+      <th><span>Apr</span></th>
+      <th><span>Maj</span></th>
+      <th><span>Jun</span></th>
+      <th><span>Jul</span></th>
+      <th><span>Aug</span></th>
+      <th><span>Sep</span></th>
+      <th><span>Okt</span></th>
+      <th><span>Nov</span></th>
+      <th><span>Dec</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr gun-category *ngFor="let category of budget.categories" [category]="category">
+    </tr>
+  </tbody>
+</table>

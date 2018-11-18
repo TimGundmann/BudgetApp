@@ -1,0 +1,8 @@
+td, th {
+    text-align: end;
+} 
+
+.name {
+    text-align: start;
+    width: 400px;
+}
