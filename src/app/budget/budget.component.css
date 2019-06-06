@@ -6,3 +6,8 @@ td, th {
     text-align: start;
     width: 400px;
 }
+
+.bottom-line {
+    text-align: start;
+    border-bottom: 2px black solid;
+}

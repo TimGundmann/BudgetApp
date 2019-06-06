@@ -3,4 +3,5 @@
 </td>
 <td *ngFor="let month of fillMonths(category)" class="number-td">
   <span *ngIf="month.totalExpenses">{{month.totalExpenses}}</span>
+  <span *ngIf="month.totalIncome">{{month.totalIncome}}</span>
 </td>

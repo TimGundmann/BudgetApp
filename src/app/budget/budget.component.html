@@ -5,7 +5,7 @@
 <table width="100%">
   <thead>
     <tr>
-      <th class="name"><span>Navn</span></th>
+      <th class="name"><span>Udgifter</span></th>
       <th><span>Jan</span></th>
       <th><span>Feb</span></th>
       <th><span>Mar</span></th>
@@ -21,7 +21,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr gun-category *ngFor="let category of budget.categories" [category]="category">
+    <ng-container *ngFor="let category of budget.categories">
+      <tr gun-category *ngIf="!category.income" [category]="category"></tr>
+    </ng-container>
+    <tr>
+      <td class="bottom-line" colspan="13">
+        <span>Indtægter</span>
+      </td>
     </tr>
+    <ng-container *ngFor="let category of budget.categories">
+      <tr gun-category *ngIf="category.income" [category]="category"></tr>
+    </ng-container>
   </tbody>
 </table>
